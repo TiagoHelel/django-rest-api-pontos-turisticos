@@ -5,7 +5,7 @@ from enderecos.api.serializers import EnderecoSerializer
 from rest_framework.fields import SerializerMethodField
 
 class PontoTuristicoSerializer(ModelSerializer):
-    atracoes = AtracaoSerializer(many=True)
+    # atracoes = AtracaoSerializer(many=True)
     endereco = EnderecoSerializer()
     descricao_completa = SerializerMethodField()
 
