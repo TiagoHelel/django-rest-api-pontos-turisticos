@@ -6,14 +6,13 @@ from rest_framework.fields import SerializerMethodField
 
 class PontoTuristicoSerializer(ModelSerializer):
     # atracoes = AtracaoSerializer(many=True)
-    endereco = EnderecoSerializer()
+    # endereco = EnderecoSerializer()
     descricao_completa = SerializerMethodField()
 
     class Meta:
         model = PontoTuristico
         fields = [
             'id', 'nome', 'descricao', 'aprovado', 'endereco', 'foto',
-            'endereco', 
             'descricao_completa', 'descricao_completa2'
             ]
         # fields = [
