@@ -13,6 +13,7 @@ class PontoTuristicoViewSet(ModelViewSet):
     # queryset = PontoTuristico.objects.filter(aprovado=True)
     serializer_class = PontoTuristicoSerializer
     filter_backends = [SearchFilter]
+    #TODO comentado porque nao roda em producao
     # permission_classes = [IsAuthenticated]
     # authentication_classes = [TokenAuthentication]
     search_fields = ['nome', 'descricao', 'endereco__linha1']
