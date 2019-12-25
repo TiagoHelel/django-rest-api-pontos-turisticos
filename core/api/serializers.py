@@ -25,7 +25,7 @@ class PontoTuristicoSerializer(ModelSerializer):
         #     'id', 'nome', 'descricao', 'aprovado', 'endereco', 'foto',
         #     'descricao_completa', 'descricao_completa2'
         #     ]
-            read_only_fields('comentarios', 'avaliacoes')
+        read_only_fields('comentarios', 'avaliacoes')
         fields = [
             'id', 'nome', 'descricao', 'aprovado', 'endereco', 'foto',
             'atracoes', 'comentarios', 'avaliacoes', 'endereco', 
