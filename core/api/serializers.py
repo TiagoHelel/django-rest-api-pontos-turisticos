@@ -26,7 +26,8 @@ class PontoTuristicoSerializer(ModelSerializer):
             'id', 'nome', 'descricao', 'aprovado', 'endereco', 'foto',
             'atracoes', 'comentarios', 'avaliacoes', 'endereco', 
             'descricao_completa', 'descricao_completa2'
-            ].read_only_fields('comentarios', 'avaliacoes')
+            ]
+        read_only_fields('comentarios', 'avaliacoes')
     def cria_atracoes(self, atracoes, ponto):
         for atracao in atracoes:
             at = Atracao.objects.create(**atracao)
