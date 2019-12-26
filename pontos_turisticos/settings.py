@@ -27,7 +27,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['pontos-turisticos-ts.herokuapp.com', 'localhost:8000']
+ALLOWED_HOSTS = ['pontos-turisticos-ts.herokuapp.com']
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -142,3 +143,8 @@ REST_FRAMEWORK = {
 }
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 5
+}
