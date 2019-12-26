@@ -14,8 +14,7 @@ class DocIdentificacaoSerializer(ModelSerializer):
         fields = '__all__'
 
 class PontoTuristicoSerializer(ModelSerializer):
-    # atracoes = AtracaoSerializer(many=True)
-    atracoes = AtracaoSerializer(many=False)
+    atracoes = AtracaoSerializer(many=True)
     endereco = EnderecoSerializer(many=False)
     descricao_completa = SerializerMethodField()
     doc_identificacao = DocIdentificacaoSerializer()
